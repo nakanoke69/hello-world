@@ -72,7 +72,8 @@
     "stylelint-order": "^5.0.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": ". ./lint-staged-around",
+    "pre-push": ". ./test-around"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
